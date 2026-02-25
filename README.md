@@ -40,8 +40,28 @@
       - Moyen : mots normaux
       - Difficile : mots long
       - Extreme : phrase
-      
-4.  _Interface Utilisateur_
+
+4. _Syteme de niveau_
+
+  i. Objectif
+     Augmenter progressivemnt la diffficultes pour :
+     - ameliorela vitesse de frappe 
+     - rendre le jeu plus motivant
+     - creer une progression pour lr joueur
+
+
+  ii. Structure des niveaux
+
+    [niveau1] -> difficulte : facile ; temps : 60s - 50s ; Type_de_mots : mots courts
+    [niveau2] -> difficulte : Moyen ; temps : 50s - 40 ; Type_de_mots : mots normaux
+    [niveau1] -> difficulte : difficile ; temps : 40s - 30s ; Type_de_mots : mots longs
+    [niveau1] -> difficulte : expert ; temps : 30s ; Type_de_mots : phrases
+
+  iii. Logistique de progression : 
+    Le jouer passe au niveau suivant si :
+     - Score >= MOYENNE (exemple: 10) sinon il recommence le niveau
+     
+5.  _Interface Utilisateur_
 
    Elements necessaire :
     
@@ -54,13 +74,13 @@
      - Bouton Start et Reset
      - option Activer/ Desactiver le son
 
-5. _Technologie a utiliser_
+6. _Technologie a utiliser_
 
     - HTML : structure du jeu
     - CSS : design les mise en page
     - JavaScript : logique du jeu, gestion des score, gestion du temps, generation aleatoire des mots en fonction des nivaux
    
-6. _Systeme de comptes joueures (Utilisation localstorage)_
+7. _Systeme de comptes joueures (Utilisation localstorage)_
 
     i. Objetif :
 
@@ -79,7 +99,7 @@
         - si oui , charger ses scores
         - sinon, creer un nouveau profil  
 
-7. _Ajout de sons de vailidation_ 
+8. _Ajout de sons de vailidation_ 
 
     i. Objetif : Ajouter un son quand :
 
@@ -87,7 +107,7 @@
         - erreure de frappe
         - fin de partie (temps ecouler)
 
-8. _Structure du projet_
+9. _Structure du projet_
 
    TypeSprint/
    |___ index.html
