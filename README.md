@@ -1,18 +1,18 @@
-**Projet TypeSprint**
+#                       PROJET TYPESPRINT
 
-1. _Presentation du projet_ :
+#        Presentation du projet :
 
    TypeSprint est um jeu edducatif qui permet aux jouer d'ameliorer leur vitesse de frappe au clavier et leur
    precision a travers des defis chronometrer de different niveaux
    
-2. _Objectifs du projet_ :
+#        Objectifs du projet :
 
     - Ameliorer la vitesse de frappe de l'utilisateur
     - Apprendre la positiom correcte des touches
     - Proposer un jeu simple, rapide et motivant.
     - Mettre en pratiques mes connaissance en HTML, CSS et JavaScript
       
-3. _Fonctionalite principales_
+#        Fonctionalite principales
    
     i. Affichage des mots
 
@@ -41,7 +41,7 @@
       - Difficile : mots long
       - Extreme : phrase
 
-4. _Syteme de niveau_
+#        Syteme de niveau
 
   i. Objectif
      Augmenter progressivemnt la diffficultes pour :
@@ -60,8 +60,14 @@
   iii. Logistique de progression : 
     Le jouer passe au niveau suivant si :
      - Score >= MOYENNE (exemple: 10) sinon il recommence le niveau
-     
-5.  _Interface Utilisateur_
+
+#        # Systeme De Rounde Par Niveau 
+    Chaque niveau sera diviser en plusieurs rounds pour :
+        - rendre la progression plus dynamique;
+        - augementer progressivement la idfficulter
+        - eviter que le niveau soit trop court 
+
+#         Interface Utilisateur
 
    Elements necessaire :
     
@@ -74,13 +80,13 @@
      - Bouton Start et Reset
      - option Activer/ Desactiver le son
 
-6. _Technologie a utiliser_
+#        Technologie a utiliser
 
     - HTML : structure du jeu
     - CSS : design les mise en page
     - JavaScript : logique du jeu, gestion des score, gestion du temps, generation aleatoire des mots en fonction des nivaux
    
-7. _Systeme de comptes joueures (Utilisation localstorage)_
+#        Systeme de comptes joueures (Utilisation localstorage)
 
     i. Objetif :
 
@@ -99,7 +105,7 @@
         - si oui , charger ses scores
         - sinon, creer un nouveau profil  
 
-8. _Ajout de sons de vailidation_ 
+#        Ajout de sons de vailidation 
 
     i. Objetif : Ajouter un son quand :
 
@@ -107,7 +113,7 @@
         - erreure de frappe
         - fin de partie (temps ecouler)
 
-9. _Structure du projet_
+#       Structure du projet
 
    TypeSprint/
    |___ index.html
