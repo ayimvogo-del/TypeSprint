@@ -1,0 +1,64 @@
+:root {
+
+  /* ── Palette principale ─────────────────────────── */
+    --color-bg:         #020d1a;
+    --color-bg-mid:     #031220;
+    --color-card:       #061829;
+    --color-card-alt:   #041220;
+    --color-code-bg:    #0a1f33;
+
+    --color-blue:       #00c3ff;
+    --color-green:      #39d353;
+    --color-red:        #ff4055;
+    --color-orange:     #ffaa00;
+    --color-white:      #e8f4ff;
+    --color-dim:        #5a7a9a;
+    --color-dim-dark:   #2a4a6a;
+
+    /* ── Glows (ombres colorées) ────────────────────── */
+    --glow-blue:        rgba(0,   195, 255, 0.35);
+    --glow-green:       rgba(57,  211,  83, 0.35);
+    --glow-red:         rgba(255,  64,  85, 0.35);
+    --glow-orange:      rgba(255, 170,   0, 0.35);
+
+    /* ── Bordures semi-transparentes ───────────────── */
+    --border-blue:      rgba(0,   195, 255, 0.20);
+    --border-blue-soft: rgba(0,   195, 255, 0.12);
+    --border-green:     rgba(57,  211,  83, 0.30);
+
+    /* ── Typographie ────────────────────────────────── */
+    --font-display: 'Orbitron', sans-serif;
+    --font-body:    'Rajdhani', sans-serif;
+
+    --text-xs:   0.75rem;
+    --text-sm:   0.875rem;
+    --text-base: 1rem;
+    --text-md:   1.1rem;
+    --text-lg:   1.3rem;
+    --text-xl:   1.6rem;
+    --text-2xl:  2rem;
+    --text-3xl:  2.6rem;
+
+    /* ── Espacements ────────────────────────────────── */
+    --space-1:  4px;
+    --space-2:  8px;
+    --space-3:  12px;
+    --space-4:  16px;
+    --space-5:  20px;
+    --space-6:  24px;
+    --space-8:  32px;
+    --space-10: 40px;
+
+    /* ── Rayons ─────────────────────────────────────── */
+    --radius-sm:  6px;
+    --radius-md:  10px;
+    --radius-lg:  14px;
+
+    /* ── Transitions ────────────────────────────────── */
+    --transition-fast:   0.15s ease;
+    --transition-base:   0.25s ease;
+    --transition-slow:   0.4s ease;
+
+    /* ── Timer SVG ──────────────────────────────────── */
+    --timer-circumference: 175.93; /* 2 * PI * 28 */
+}
