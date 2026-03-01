@@ -7,6 +7,136 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+        <!-- CANVAS POUR LES PARTICULES (derrière la carte)  -->
+        <canvas id="particles-canvas"></canvas>
+
+    <!-- --------------------------- CARTE PRINCIPALE ----------------------------->
+    <div class="card" id="card">
+
+        <!-- Bouton son -->
+        <button class="sound-btn" id="soundBtn" aria-label="Toggle son">🔊</button>
+
+        <!-- Logo -->
+        <header class="logo" aria-label="TypeSprint">
+            <span class="logo__type">Type</span><span class="logo__sprint">Sprint</span>
+        </header>
+
+        <!-- Barre de stats -->
+        <div class="stats-bar" role="status" aria-live="polite">
+          <div class="stats-bar__item">
+              Score: <span class="stats-bar__value stats-bar__value--score" id="scoreEl">0</span>
+          </div>
+
+        <!-- Timer circulaire -->
+        <div class="timer-ring" id="timerRing" role="timer">
+          <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+            <circle class="timer-ring__track" cx="32" cy="32" r="28" />
+            <circle class="timer-ring__progress" id="timerRingProgress" cx="32" cy="32" r="28" />
+          </svg>
+          <span class="timer-ring__label" id="timerLabel">60</span>
+      </div>
+
+      <div class="stats-bar__item">
+        Temps: <span class="stats-bar__value stats-bar__value--time" id="timeEl">60s</span>
+      </div>
+    </div>
+
+    <!-- Barre de vitesse WPM -->
+    <div class="speed-bar" aria-label="Vitesse de frappe">
+      <div class="speed-bar__fill" id="speedBarFill"></div>
+    </div>
+
+    <!-- Infos Niveau / Round (masqué avant démarrage) -->
+    <div class="level-info hidden" id="levelInfo" aria-live="polite">
+      Niveau : <span id="levelEl">1</span>
+      <span class="level-info__sep"></span>
+      Round : <span id="roundEl">1 / 4</span>
+    </div>
+
+    <!-- Boîte du mot à taper -->
+    <div class="word-box" id="wordBox" aria-label="Mot à taper">
+      <div class="word-box__inner" id="wordDisplay">
+        <span class="letter letter--pending">o</span>
+        <span class="letter letter--pending">r</span>
+        <span class="letter letter--pending">d</span>
+        <span class="letter letter--pending">i</span>
+        <span class="letter letter--pending">n</span>
+        <span class="letter letter--pending">a</span>
+        <span class="letter letter--pending">t</span>
+        <span class="letter letter--pending">e</span>
+        <span class="letter letter--pending">u</span>
+        <span class="letter letter--pending">r</span>
+      </div>
+    </div>
+
+    <!-- Zone de saisie -->
+    <div class="input-row" id="inputRow">
+      <div class="check-icon check-icon--idle" id="checkIcon" aria-hidden="true">✓</div>
+
+      <input
+        class="word-input"
+        id="wordInput"
+        type="text"
+        placeholder="Tape le mot ici..."
+        autocomplete="off"
+        spellcheck="false"
+        disabled
+        aria-label="Champ de saisie"
+      />
+
+      <button class="clear-btn" id="clearBtn" aria-label="Effacer la saisie">✕</button>
+
+      <!-- Indicateur de combo -->
+      <div class="combo-dots" id="comboDots" aria-label="Combo">
+        <span class="combo-dots__dot"></span>
+        <span class="combo-dots__dot"></span>
+        <span class="combo-dots__dot"></span>
+      </div>
+    </div>
+
+    <!-- --------------------------------Bouton principal------------------------------------------------------ -->
+    <button class="btn btn--green btn--full" id="startBtn">Démarrer</button>
+
+
+    <!-- ------------------------------- POPUP : NIVEAU COMPLÉTÉ ------------------ -->
+    <div class="overlay" id="levelPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <div class="popup popup--success">
+        <h2 class="popup__title" id="popupTitle">Niveau Complété !</h2>
+        <p class="popup__msg" id="popupMsg">Bravo! Niveau 1 terminé. Passe au suivant!</p>
+        <div class="popup__info-row">
+          Niveau : <span id="popupLevelEl">2</span>
+          <span class="popup__info-sep"></span>
+          Round : <span id="popupRoundEl">1 / 4</span>
+        </div>
+        <button class="btn btn--green btn--full" id="continueBtn">Continuer</button>
+      </div>
+    </div>
+
+    <!-- ----------------------------------------ÉCRAN : JEU TERMINÉ--------------------------------------------------------------- -->
+    <div class="overlay" id="gameoverScreen" role="dialog" aria-modal="true" aria-labelledby="gameoverTitle">
+      <div class="popup popup--gameover">
+        <h2 class="popup__title popup__title--blue" id="gameoverTitle">Jeu Terminé !</h2>
+        <p class="popup__msg">Bravo! Tu as terminé TypeSprint.<br>Résultat final !</p>
+        <div class="result-grid">
+          <div class="result-grid__row">
+            <span class="result-grid__label">Score :</span>
+            <span class="result-grid__value" id="goScore">0</span>
+          </div>
+          <div class="result-grid__row">
+            <span class="result-grid__label">Précision :</span>
+            <span class="result-grid__value" id="goAcc">0%</span>
+          </div>
+          <div class="result-grid__row">
+            <span class="result-grid__label">Vitesse :</span>
+            <span class="result-grid__value" id="goWpm">0 WPM</span>
+          </div>
+        </div>
+        <button class="btn btn--green btn--full" id="replayBtn">Rejouer</button>
+      </div>
+    </div>
+
+  </div><!-- /card -->
+
+
 </body>
 </html>
